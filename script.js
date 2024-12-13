@@ -1,32 +1,33 @@
-const display = document.getElementById('display');
+const inputEl = document.getElementById('display');
 
 function addToDisplay(input) {
-  display.value += input;
+  inputEl.value += input;
 }
 
 function clearDisplay() {
-  display.value = '';
+  inputEl.value = '';
 }
 
 function calculate() {
   try {
-    display.value = eval(display.value);
+    inputEl.value = eval(inputEl.value);
   } catch (error) {
-    display.value = 'Error';
+    inputEl.value = 'Error';
  }
 }
 
-document.addEventListener('keydown', function(e) {
-  const keyName = e.key;
+document.addEventListener('keydown', function(event) {
+  const keyName = event.key;
+
   if (keyName === "Backspace") {
-      display.value = display.value.slice(0, -1);
+      inputEl.value = inputEl.value.slice(0, -1);
   }
 })
 
 const charactersToIgnore = 'qwertyuiop[]asdfghjkl;zxcvbnm,!@#$%^&_';
 
-document.addEventListener('keypress', function(e) {
-  const keyName = e.key;
+document.addEventListener('keypress', function(event) {
+  const keyName = event.key;
   
   if (!charactersToIgnore.includes(keyName)) {
     
@@ -35,6 +36,6 @@ document.addEventListener('keypress', function(e) {
       return;
     }
 
-    display.value += keyName;
+    inputEl.value += keyName;
   }
 })
