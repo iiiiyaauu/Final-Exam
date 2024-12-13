@@ -4,9 +4,9 @@
 
 .phone {
     margin: 0 auto;
-    width: 428px;
+    max-width: 428px;
     height: 926px;
-    background-color: black;
+    background-color: #000;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -17,6 +17,7 @@
 
 #display {
     font-size: 100px;
+    width: 100%;
     background-color: transparent;
     border: none;
     color: #fff;
