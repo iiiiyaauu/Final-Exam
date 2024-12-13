@@ -8,27 +8,25 @@
 </head>
 <body>
     <div class="phone">
+        <input type="text" id="display" readonly>
         <div class="buttons">
-            <button id="btnAC" class="button">0</button>
-            <button id="btn+-" class="button">0</button>
-            <button id="" class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
-            <button class="button">0</button>
+            <button id="btnAC" class="button button-grey" onclick="clearDisplay()">AC</button>
+            <button id="btnDivide" class="button button-yellow button-divide" onclick="addToDisplay('/')">/</button>
+            <button id="btn7" onclick="addToDisplay('7')" class="button">7</button>
+            <button id="btn8" onclick="addToDisplay('8')" class="button">8</button>
+            <button id="btn9" onclick="addToDisplay('9')" class="button">9</button>
+            <button id="btnMultiplication" onclick="addToDisplay('*')" class="button button-yellow">*</button>
+            <button id="btn4" onclick="addToDisplay('4')" class="button">4</button>
+            <button id="btn5" onclick="addToDisplay('5')" class="button">5</button>
+            <button id="btn6" onclick="addToDisplay('6')" class="button">6</button>
+            <button id="btnSubtract" onclick="addToDisplay('-')" class="button button-yellow">-</button>
+            <button id="btn1" onclick="addToDisplay('1')" class="button">1</button>
+            <button id="btn2" onclick="addToDisplay('2')" class="button">2</button>
+            <button id="btn3" onclick="addToDisplay('3')" class="button">3</button>
+            <button id="btnAdd" onclick="addToDisplay('+')" class="button button-yellow">+</button>
+            <button id="btn0" onclick="addToDisplay('0')" class="button button-lg">0</button>
+            <button id="btnComa" onclick="addToDisplay('.')" class="button">,</button>
+            <button id="btnEqual" onclick="calculate()" class="button button-yellow">=</button>
         </div>
     </div>
 <script src="script.js"></script>
